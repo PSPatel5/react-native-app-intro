@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "components/*": ["components/*"],
+      "themes/*": ["themes/*"],
+      "utils/*": ["utils/*"]
+    },
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
