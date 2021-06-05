@@ -4,7 +4,7 @@
 ![React Native App Intro Version](https://img.shields.io/badge/version-v1.0.0-blue)
 ![React Native App Intro Release](https://img.shields.io/badge/release-june-yellow)
 ![React Native App Intro Top Language](https://img.shields.io/github/languages/top/Parth-coditas/react-native-app-intro)
-![React Native Boilerplate TypeScript](https://img.shields.io/badge/language-ts-blue)
+![React Native App Intro TypeScript](https://img.shields.io/badge/language-ts-blue)
 
 This project is a [React Native](https://facebook.github.io/react-native/) onboarding library that can be used to beautify user onboarding experience.
 
@@ -19,6 +19,56 @@ Some of the key highlights of this library is as below:
 - Completely written in typescript.
 - Cross-platform support.
 - Highly customizable.
+
+
+## Properties
+
+
+##### Interfaces
+
+```typescript
+
+// page indicator animation whlie changing screen.
+type animationType =  "sliding-border" | "sliding-dot" | "scaling-dot" | "expanding";  
+
+// Pagination component props
+interface PaginationProps {
+  activeDotColor?: string;
+  inactiveDotColor?: string;
+  dotSize?: number;
+  dotSpacing?: number;
+  animationType?: animationType;
+  dotStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
+  activeDotStyle?: StyleProp<ViewStyle>;
+}
+
+// Bottom Button Props
+interface BottomProps {
+  showSkipButton?: boolean;
+  skipButtonText?: string;
+  nextButtonText?: string;
+  skipTextStyle?: StyleProp<TextStyle>;
+  nextTextStyle?: StyleProp<TextStyle>;
+  skipContainerStyle?: StyleProp<ViewStyle>;
+  nextContainerStyle?: StyleProp<ViewStyle>;
+  onSkipPress?: () => void;
+  onNextPress?: (activeIndex: number, nextIndex: number) => void;
+  onDonePress?: () => void;
+}
+
+```
+
+
+
+| Property Name  | Expected Type  | Default Value  | Required   |
+| :------------: | :------------: | :------------: | :------------: |
+| showPagination  |  boolean  | false  | false  |
+|  paginationProps | [Pagination Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces) | undefined  | false  |
+| buttonProps  | [Bottom Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces)  | undefined  | false  |
+| renderPagination  | ( activeIndex:number , totalSlides:number ) => ReactNode  | undefined  |  false |
+| onSlideChange  | (currentIndex: number, prevIndex: number) => void  | undefined  | false  |
+
 
 ## Start
 
