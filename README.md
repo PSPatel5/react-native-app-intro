@@ -20,16 +20,17 @@ Some of the key highlights of this library is as below:
 - Cross-platform support.
 - Highly customizable.
 
-
 ## Properties
-
 
 ##### Interfaces
 
 ```typescript
-
 // page indicator animation whlie changing screen.
-type animationType =  "sliding-border" | "sliding-dot" | "scaling-dot" | "expanding";  
+type animationType =
+  | "sliding-border"
+  | "sliding-dot"
+  | "scaling-dot"
+  | "expanding";
 
 // Pagination component props
 interface PaginationProps {
@@ -57,18 +58,25 @@ interface BottomProps {
   onDonePress?: () => void;
 }
 
+// Page Component Props
+interface PageProps {
+  title: string;
+  image: ImageSourcePropType;
+  description?: string;
+  containerStyle?: StyleProp<ViewStyle>;
+  titleStyle?: StyleProp<TextStyle>;
+  imageStyle?: StyleProp<ImageStyle>;
+  descriptionStyle?: StyleProp<TextStyle>;
+}
 ```
 
-
-
-| Property Name  | Expected Type  | Default Value  | Required   |
-| :------------: | :------------: | :------------: | :------------: |
-| showPagination  |  boolean  | false  | false  |
-|  paginationProps | [Pagination Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces) | undefined  | false  |
-| buttonProps  | [Bottom Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces)  | undefined  | false  |
-| renderPagination  | ( activeIndex:number , totalSlides:number ) => ReactNode  | undefined  |  false |
-| onSlideChange  | (currentIndex: number, prevIndex: number) => void  | undefined  | false  |
-
+|  Property Name   |                                     Expected Type                                      | Default Value | Required |
+| :--------------: | :------------------------------------------------------------------------------------: | :-----------: | :------: |
+|  showPagination  |                                        boolean                                         |     false     |  false   |
+| paginationProps  | [Pagination Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces) |   undefined   |  false   |
+|   buttonProps    |   [Bottom Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces)   |   undefined   |  false   |
+| renderPagination |                ( activeIndex:number , totalSlides:number ) => ReactNode                |   undefined   |  false   |
+|  onSlideChange   |                   (currentIndex: number, prevIndex: number) => void                    |   undefined   |  false   |
 
 ## Start
 
@@ -107,11 +115,14 @@ const App = () => {
         showSkipButton: true,
       }}
     >
-      <Screen title={"Screen 1"} />
+      <IntroSlider.Page
+        title={"Any Title"}
+        image={require("./path-to-image")}
+        desciption={"screen description"}
+        // Read more about supported props in interfaces section
+      />
       <Screen title={"Screen 2"} />
       <Screen title={"Screen 3"} />
-      <Screen title={"Screen 4"} />
-      <Screen title={"Screen 5"} />
     </IntroSlider>
   );
 };
@@ -119,7 +130,6 @@ const App = () => {
 
 ## Roadmap
 
-- Add a minimal predefined component for quick use.
 - Add a permission based component and function.
 - Add an option to render custom skip and next button component.
 - Add example directory.

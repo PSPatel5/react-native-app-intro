@@ -3,6 +3,7 @@ import { Animated, NativeScrollEvent, SafeAreaView, View } from "react-native";
 import { screenWidth } from "themes";
 import { styles } from "./styles";
 import { BottomContainer } from "./Components/BottomContainer";
+import { Page } from "./Components/Page";
 import { BottomProps, PaginationProps } from "utils/Interfaces";
 
 interface Props extends React.PropsWithChildren<any> {
@@ -20,7 +21,7 @@ const renderItem = (props: any) => {
   return <View style={styles.childWrapper}>{props.item}</View>;
 };
 
-export const IntroSlider = (props: Props) => {
+const IntroSlider = (props: Props) => {
   const {
     children: slides,
     showPagination,
@@ -113,3 +114,7 @@ export const IntroSlider = (props: Props) => {
     </SafeAreaView>
   );
 };
+
+IntroSlider.Page = Page;
+
+export { IntroSlider };
