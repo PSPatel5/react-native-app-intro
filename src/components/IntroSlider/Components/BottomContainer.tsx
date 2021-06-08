@@ -1,12 +1,5 @@
 import React, { ReactNode } from "react";
-import {
-  Animated,
-  StyleProp,
-  StyleSheet,
-  TextStyle,
-  View,
-  ViewStyle,
-} from "react-native";
+import { Animated, StyleSheet, View } from "react-native";
 import { If, Button, Pagination } from "components";
 import { Colors, normalize, screenWidth } from "themes";
 import { BottomProps, PaginationProps } from "utils/Interfaces";
