@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import { Animated, StyleSheet, View } from "react-native";
-import { If, Button, Pagination } from "components";
-import { Colors, normalize, screenWidth } from "themes";
-import { BottomProps, PaginationProps } from "utils/Interfaces";
+import { If, Button, Pagination } from "../../index";
+import { Colors, normalize, screenWidth } from "../../../themes";
+import { BottomProps, PaginationProps } from "../../../utils/Interfaces";
 
 interface Props extends BottomProps, PaginationProps {
   slides: any;

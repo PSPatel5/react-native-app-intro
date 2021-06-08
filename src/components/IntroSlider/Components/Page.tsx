@@ -10,8 +10,8 @@ import {
   ImageStyle,
   ViewStyle,
 } from "react-native";
-import { If } from "components";
-import { normalize, screenHeight, screenWidth } from "themes/Metrics";
+import { If } from "../../index";
+import { normalize, screenHeight, screenWidth } from "../../../themes";
 
 interface PageProps {
   title: string;

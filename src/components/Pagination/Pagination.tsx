@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
 import { Animated, StyleSheet, View } from "react-native";
-import { If } from "components";
+import { If } from "../index";
 import {
   ExpandPagination,
   SlidingDot,
   SlidingBorder,
   ScalingDot,
 } from "./Components";
-import { PaginationProps } from "utils/Interfaces";
+import { PaginationProps } from "../../utils/Interfaces";
 interface PaginationComponentProps extends PaginationProps {
   showPagination?: boolean;
   slides: [];

@@ -1,5 +1,5 @@
 import { Animated } from "react-native";
-import { screenWidth, Colors } from "themes";
+import { screenWidth, Colors } from "../../themes";
 
 interface ExpandingAnimationProps {
   scrollX: Animated.Value;

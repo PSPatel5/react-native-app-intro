@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Animated, StyleSheet } from "react-native";
-import { ExpandingProps } from "utils/Interfaces";
+import { ExpandingProps } from "../../../utils/Interfaces";
 import { getExpandingAnimations } from "../PaginationHelper";
 
 export const ExpandPagination = ({

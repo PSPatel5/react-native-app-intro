@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Animated, StyleSheet } from "react-native";
-import { ScalingDotProps } from "utils/Interfaces";
+import { ScalingDotProps } from "../../../utils/Interfaces";
 import { getScalingAnimations } from "../PaginationHelper";
 
 export const ScalingDot = ({

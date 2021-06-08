@@ -1,5 +1,5 @@
-import React from 'react';
-import { If } from 'components';
+import React from "react";
+import { If } from "../index";
 import {
   ActivityIndicator,
   Pressable,
@@ -7,9 +7,9 @@ import {
   Text,
   TextStyle,
   ViewStyle,
-} from 'react-native';
-import { styles } from './styles';
-import Colors from 'themes/Colors';
+} from "react-native";
+import { styles } from "./styles";
+import { Colors } from "../../themes";
 interface Props {
   onPress: () => void;
   children?: React.ReactNode;
@@ -39,7 +39,8 @@ export const Button = (props: Props) => {
     <Pressable
       onPress={onPress}
       disabled={disabled || loading}
-      style={buttonStyleWrapper}>
+      style={buttonStyleWrapper}
+    >
       <If condition={Boolean(loading)}>
         <ActivityIndicator color={loadingColor} />
       </If>

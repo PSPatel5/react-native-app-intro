@@ -1,10 +1,10 @@
 import React, { ReactNode, useRef, useState } from "react";
 import { Animated, NativeScrollEvent, SafeAreaView, View } from "react-native";
-import { screenWidth } from "themes";
+import { screenWidth } from "../../themes";
 import { styles } from "./styles";
 import { BottomContainer } from "./Components/BottomContainer";
 import { Page } from "./Components/Page";
-import { BottomProps, PaginationProps } from "utils/Interfaces";
+import { BottomProps, PaginationProps } from "../../utils/Interfaces";
 
 interface Props extends React.PropsWithChildren<any> {
   showPagination?: boolean;

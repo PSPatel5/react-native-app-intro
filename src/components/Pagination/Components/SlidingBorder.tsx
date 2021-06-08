@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Animated, StyleSheet, View } from "react-native";
-import { screenWidth, Colors } from "themes";
-import { SlidingBorderProps } from "utils/Interfaces";
+import { screenWidth, Colors } from "../../../themes";
+import { SlidingBorderProps } from "../../../utils/Interfaces";
 
 export const SlidingBorder = ({
   scrollX,
