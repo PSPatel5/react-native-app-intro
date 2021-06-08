@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 .npmrc
 .npmignore
+example/android/app/debug.keystore

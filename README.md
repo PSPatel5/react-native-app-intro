@@ -132,6 +132,5 @@ const App = () => {
 
 - Add a permission based component and function.
 - Add an option to render custom skip and next button component.
-- Add example directory.
 - Add output screenshots/gif(s).
 - Expose goToSlide method to end developers.
