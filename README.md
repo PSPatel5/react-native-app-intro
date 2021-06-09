@@ -1,7 +1,7 @@
 # React Native App Intro
 
 ![React Native App Intro License](https://img.shields.io/github/license/Parth-coditas/react-native-app-intro)
-![React Native App Intro Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![React Native App Intro Version](https://img.shields.io/badge/version-v1.0.3-blue)
 ![React Native App Intro Release](https://img.shields.io/badge/release-june-yellow)
 ![React Native App Intro Top Language](https://img.shields.io/github/languages/top/Parth-coditas/react-native-app-intro)
 ![React Native App Intro TypeScript](https://img.shields.io/badge/language-ts-blue)
@@ -9,6 +9,12 @@
 This project is a [React Native](https://facebook.github.io/react-native/) onboarding library that can be used to beautify user onboarding experience.
 
 The library is completely written in typescript and highly customizable.
+
+## Demo
+
+|                                                                                 Expand                                                                                  |                                                                               Scale Dot                                                                               |                                                                               Slide Dot                                                                               |                                                                                Slide Border                                                                                 |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Expand%20animation.gif" height="550" width="600" alt="Expand Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Scaling%20Dot.gif" height="550" width="600" alt="Scale dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Dot.gif" height="550" width="600" alt="Slide dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Border.gif" height="550" width="600" alt="Slide border Animation"/> |
 
 ## Library Highlights
 
@@ -132,5 +138,4 @@ const App = () => {
 
 - Add a permission based component and function.
 - Add an option to render custom skip and next button component.
-- Add output screenshots/gif(s).
 - Expose goToSlide method to end developers.
