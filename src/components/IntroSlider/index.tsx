@@ -110,6 +110,7 @@ const IntroSlider = (props: Props) => {
         slides={slides}
         scrollX={scrollX}
         showPagination
+        goToSlide={goToSlide}
         renderPagination={renderPagination}
         onNextPress={handleNextPress}
         onSkipPress={handleSkipPress}

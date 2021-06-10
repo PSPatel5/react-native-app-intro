@@ -1,7 +1,7 @@
 # React Native App Intro
 
 ![React Native App Intro License](https://img.shields.io/github/license/Parth-coditas/react-native-app-intro)
-![React Native App Intro Version](https://img.shields.io/badge/version-v1.0.3-blue)
+![React Native App Intro Version](https://img.shields.io/badge/version-v1.1.0-blue)
 ![React Native App Intro Release](https://img.shields.io/badge/release-june-yellow)
 ![React Native App Intro Top Language](https://img.shields.io/github/languages/top/Parth-coditas/react-native-app-intro)
 ![React Native App Intro TypeScript](https://img.shields.io/badge/language-ts-blue)
@@ -22,6 +22,7 @@ Some of the key highlights of this library is as below:
 
 - Beautiful pagination animations.
 - Custom pagination component support.
+- Custom Next and Skip button component support.
 - Completely written in typescript.
 - Cross-platform support.
 - Highly customizable.
@@ -38,16 +39,19 @@ type animationType =
   | "scaling-dot"
   | "expanding";
 
-// Pagination component props
-interface PaginationProps {
-  activeDotColor?: string;
-  inactiveDotColor?: string;
-  dotSize?: number;
-  dotSpacing?: number;
-  animationType?: animationType;
-  dotStyle?: StyleProp<ViewStyle>;
-  containerStyle?: StyleProp<ViewStyle>;
-  activeDotStyle?: StyleProp<ViewStyle>;
+interface renderSkipButtonProps {
+  activeIndex: number;
+  totalSlides: number;
+  goToSlide: (slideNumber: number) => void;
+  onSkipPress: () => void; // same function that you sent via BottomProps
+}
+
+interface renderNextButtonProps {
+  activeIndex: number;
+  totalSlides: number;
+  goToSlide: (slideNumber: number) => void;
+  isLastPage: boolean;
+  onNextPress: (activeIndex: number, nextIndex: number) => void; // same function that you sent via BottomProps
 }
 
 // Bottom Button Props
@@ -59,9 +63,24 @@ interface BottomProps {
   nextTextStyle?: StyleProp<TextStyle>;
   skipContainerStyle?: StyleProp<ViewStyle>;
   nextContainerStyle?: StyleProp<ViewStyle>;
+  bottomContainerStyle?: StyleProp<ViewStyle>;
   onSkipPress?: () => void;
   onNextPress?: (activeIndex: number, nextIndex: number) => void;
   onDonePress?: () => void;
+  renderSkipButton?: (props: renderSkipButtonProps) => ReactNode; // To render custom Skip button. Refer RenderSkipButtonProps Interface above for further details.
+  renderNextButton?: (props: renderNextButtonProps) => ReactNode; // To render custom Next button. Refer RenderNextButtonProps Interface above for further details.
+}
+
+// Pagination component props
+interface PaginationProps {
+  activeDotColor?: string;
+  inactiveDotColor?: string;
+  dotSize?: number;
+  dotSpacing?: number;
+  animationType?: animationType;
+  dotStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
+  activeDotStyle?: StyleProp<ViewStyle>;
 }
 
 // Page Component Props
@@ -133,9 +152,3 @@ const App = () => {
   );
 };
 ```
-
-## Roadmap
-
-- Add a permission based component and function.
-- Add an option to render custom skip and next button component.
-- Expose goToSlide method to end developers.

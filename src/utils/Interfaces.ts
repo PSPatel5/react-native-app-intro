@@ -1,13 +1,32 @@
+import { ReactNode } from "react";
 import { Animated, StyleProp, TextStyle, ViewStyle } from "react-native";
+
+interface renderButtonProps {
+  activeIndex: number;
+  totalSlides: number;
+  goToSlide: (slideNumber: number) => void;
+}
+
+interface renderSkipButtonProps extends renderButtonProps {
+  onSkipPress: () => void;
+}
+
+interface renderNextButtonProps extends renderButtonProps {
+  onNextPress: (activeIndex: number, nextIndex: number) => void;
+  isLastPage: boolean;
+}
 
 export interface BottomProps {
   showSkipButton?: boolean;
+  renderSkipButton?: (props: renderSkipButtonProps) => ReactNode;
+  renderNextButton?: (props: renderNextButtonProps) => ReactNode;
   skipButtonText?: string;
   nextButtonText?: string;
   skipTextStyle?: StyleProp<TextStyle>;
   nextTextStyle?: StyleProp<TextStyle>;
   skipContainerStyle?: StyleProp<ViewStyle>;
   nextContainerStyle?: StyleProp<ViewStyle>;
+  bottomContainerStyle?: StyleProp<ViewStyle>;
   onSkipPress?: () => void;
   onNextPress?: (activeIndex: number, nextIndex: number) => void;
   onDonePress?: () => void;

@@ -1,53 +1,49 @@
 import React from "react";
 import { If } from "../index";
 import {
-  ActivityIndicator,
   Pressable,
   StyleProp,
+  StyleSheet,
   Text,
   TextStyle,
   ViewStyle,
 } from "react-native";
-import { styles } from "./styles";
-import { Colors } from "../../themes";
+import { Colors, normalize } from "../../themes";
 interface Props {
   onPress: () => void;
   children?: React.ReactNode;
   title?: string;
   titleStyle?: StyleProp<TextStyle>;
   buttonStyle?: StyleProp<ViewStyle>;
-  disabled?: boolean;
-  loading?: boolean;
-  loadingColor?: string;
 }
 
-export const Button = (props: Props) => {
-  const {
-    title,
-    titleStyle,
-    buttonStyle,
-    children,
-    disabled,
-    loading,
-    loadingColor = Colors.white,
-    onPress,
-  } = props;
-  const buttonStyleWrapper = disabled
-    ? [styles.container, styles.disabledButton, buttonStyle]
-    : [styles.container, buttonStyle];
+export const BottomButton = (props: Props) => {
+  const { title, titleStyle, buttonStyle, children, onPress } = props;
   return (
-    <Pressable
-      onPress={onPress}
-      disabled={disabled || loading}
-      style={buttonStyleWrapper}
-    >
-      <If condition={Boolean(loading)}>
-        <ActivityIndicator color={loadingColor} />
-      </If>
-      <If condition={Boolean(!loading && title)}>
+    <Pressable onPress={onPress} style={[styles.container, buttonStyle]}>
+      <If condition={Boolean(title)}>
         <Text style={[styles.titleStyle, titleStyle]}>{title}</Text>
       </If>
-      <If condition={Boolean(!loading && children)}>{children}</If>
+      <If condition={Boolean(children)}>{children}</If>
     </Pressable>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    paddingVertical: normalize(8),
+    paddingHorizontal: normalize(18),
+    backgroundColor: Colors.primary,
+    alignItems: "center",
+    borderRadius: normalize(4),
+    marginVertical: normalize(2),
+    marginHorizontal: normalize(4),
+  },
+  disabledButton: {
+    backgroundColor: Colors.lightGrey,
+  },
+  titleStyle: {
+    textTransform: "uppercase",
+    color: Colors.white,
+  },
+});
