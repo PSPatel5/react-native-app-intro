@@ -14,7 +14,7 @@ The library is completely written in typescript and highly customizable.
 
 |                                                                                 Expand                                                                                  |                                                                               Scale Dot                                                                               |                                                                               Slide Dot                                                                               |                                                                                Slide Border                                                                                 |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Expand%20animation.gif" height="550" width="600" alt="Expand Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Scaling%20Dot.gif" height="550" width="600" alt="Scale dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Dot.gif" height="550" width="600" alt="Slide dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Border.gif" height="550" width="600" alt="Slide border Animation"/> |
+| <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Expand%20animation.gif" height="450" width="600" alt="Expand Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Scaling%20Dot.gif" height="450" width="600" alt="Scale dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Dot.gif" height="450" width="600" alt="Slide dot Animation"/> | <img src="https://raw.githubusercontent.com/Parth-coditas/react-native-app-intro/main/.github/Sliding%20Border.gif" height="450" width="600" alt="Slide border Animation"/> |
 
 ## Library Highlights
 
@@ -97,11 +97,11 @@ interface PageProps {
 
 |  Property Name   |                                     Expected Type                                      | Default Value | Required |
 | :--------------: | :------------------------------------------------------------------------------------: | :-----------: | :------: |
-|  showPagination  |                                        boolean                                         |     false     |  false   |
-| paginationProps  | [Pagination Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces) |   undefined   |  false   |
-|   buttonProps    |   [Bottom Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces)   |   undefined   |  false   |
-| renderPagination |                ( activeIndex:number , totalSlides:number ) => ReactNode                |   undefined   |  false   |
-|  onSlideChange   |                   (currentIndex: number, prevIndex: number) => void                    |   undefined   |  false   |
+|  showPagination  |                                        boolean                                         |     false     |  -   |
+| paginationProps  | [Pagination Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces) |   undefined   |  -   |
+|   buttonProps    |   [Bottom Props](https://github.com/Parth-coditas/react-native-app-intro#interfaces)   |   undefined   |  -   |
+| renderPagination |                ( activeIndex:number , totalSlides:number ) => ReactNode                |   undefined   |  -   |
+|  onSlideChange   |                   (currentIndex: number, prevIndex: number) => void                    |   undefined   |  -   |
 
 ## Start
 
