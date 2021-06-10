@@ -44,6 +44,9 @@ const IntroSlider = (props: Props) => {
     if (flRef && flRef.current) {
       flRef?.current.scrollToOffset({ offset: slideNumber * screenWidth });
     }
+    if (activeIndex !== slideNumber) {
+      setActiveIndex(slideNumber);
+    }
   };
 
   const handleSkipPress = () => {
@@ -51,7 +54,7 @@ const IntroSlider = (props: Props) => {
       buttonProps.onSkipPress();
       return;
     }
-    goToSlide(slides?.length);
+    goToSlide(slides?.length - 1);
   };
 
   const handleNextPress = () => {
